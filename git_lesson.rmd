@@ -1,0 +1,86 @@
+---
+title: "Version Control with Git"
+subtitle: "U of M WISE Software Carpentry Workshop"
+author: "Marian L. Schmidt, @micro_marian, marschmi@umich.edu"
+date: "January 5th, 2016"
+output:
+  html_document:
+    theme: united
+    toc: yes
+---
+
+***
+> **Warm up discussion:**  
+> 1. How do you currently keep track of versions of the same document?  
+> 2. When working with a collaborator simultaneously, how do you keep track of versions of the same document?
+
+***
+
+# Before We Start 
+The main page for the core lessons from the Software Carpentry Foundation can be found at <a href="http://software-carpentry.org/lessons/" target="_blank">http://software-carpentry.org/lessons/</a>  
+
+The lesson here is based on Software Carpentry's core curriculum on git entitled **"Version Control with Git"** and is maintained by Ivan Gonzalez and Daisie Huang.  
+
+The main lesson link can be found at <a href="http://swcarpentry.github.io//git-novice/" target="_blank">http://swcarpentry.github.io//git-novice/</a>   
+  
+  
+# The scenario  
+You are working on a project with your advisor/PI/post-doc/PhD or Masters student and have a deadline for a paper quickly approaching.  To get the paper where it needs to be for publication you and your collaborator must work on the document simultaneously. You're quickly passing documents back and forth and trying to keep up with each other to meet the deadline.  In the midst of all of the changes to the document, something is lost.  Which version of the document was it in?  
+  
+This moment reminds you of a time when you attended a Software Carpentry Workshop in January.  It was a busy time doing the workshop and getting ready for the semester.  However, you remember that you learned **version control is better than mailing files back and forth.**
+
+But why?
+  
+## Some Key Words
+  
+### Version Control
+
+**Version control** is a tool for managing changes to a set of files. Each set of changes creates a new **commit** of the files; the version control system allows users to recover old commits reliably, and helps manage conflicting changes made by different users.
+
+### Commit
+
+A **commit** records the current state of a set of files (a group of changes) in a **version control repository**. As a noun, the result of commiting, i.e. a recorded group of changes in a repository. If a commit contains changes to multiple files, all of the changes are recorded together.
+ 
+
+### Version Control Repository
+
+A **version control repository** is a storage area where a version control system stores the full history of commits of a project and information about who changed what, when.
+
+# Why version control?
+
+1. **Nothing that is committed to version control is ever lost.** Since all old versions of files are saved, it’s always possible to go back in time to see exactly who wrote what on a particular day, or what version of a program was used to generate a particular set of results.  
+2. As we have this record of who made what changes when, **we know who to ask if we have questions later on**, and, if needed it, **revert to a previous version,** much like the “undo” feature in an editor.  
+3. When several people collaborate in the same project, it’s possible to accidentally overlook or overwrite someone’s changes: **the version control system automatically notifies users whenever there’s a conflict between one person’s work and another’s.**
+
+Teams are not the only ones to benefit from version control: lone researchers can benefit immensely. Keeping a record of what was changed, when, and why is extremely useful for all researchers if they ever need to come back to the project later on (e.g., a year later, when memory has faded).  
+
+**Do you want to be your own friend in a year?**
+
+Version control is the lab notebook of the digital world: it’s what professionals use to keep track of what they’ve done and to collaborate with other people. Every large software development project relies on it, and most programmers use it for their small jobs as well. And it isn’t just for software: books, papers, small data sets, and anything that changes over time or needs to be shared can and should be stored in a version control system
+
+
+
+
+
+
+
+
+
+
+# Key Words
+A helpful resource describing version control with git basics from Software Carpentry <a href="http://swcarpentry.github.io//git-novice/reference.html#version-control" target="_blank">can be found here.</a>  
+
+- **Version Control**  
+- **Repository**  
+- **Commit**
+
+
+
+
+
+
+
+
+
+
+
