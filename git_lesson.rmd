@@ -73,13 +73,39 @@ Examples from my own research: <a href="https://github.com/marschmi" target="_bl
 
 # Configuring Git  
 
-
 > **Open up your bash shell, what happens when you run:**  
 > 1. `git config --list`  
 > 2. `git config`
 
-
 > Now, let's set up Git by going to <a href="http://swcarpentry.github.io/git-novice/02-setup.html" target="_blank">http://swcarpentry.github.io/git-novice/02-setup.html</a>
+
+
+
+# Create a Local Repository
+
+**Learning Goals**  
+
+- What is a **local** repository?  
+- Create a local Git repository.  
+- Check the status of a repository.
+
+
+A **local** repository means that we are creating respository on our own computer.  Our computer is local - It especially likes attending the weekly farmers market and supporting local businesses.  
+
+> 1. In bash, navigate to **`Desktop -> SWC -> SWC_R`** folder from yesterday afternoon's R lesson.  
+> 2. In the **`SWC_R`** folder, type `ls -a`.  the `-a` flag shows us the hidden items within the directory.  
+> 3. What files you see?
+> 4. Now, **initialize the repository** by typing `git init`.  
+> 5. What files you see that **`SWC_R`** is now a repository under version control?  
+> 6. To check that everything is set up correctly by asking Git to tell us the status of our project, type `git status`.
+
+
+# Tracking Changes  
+
+**Learning Goals**  
+
+- Go through the modify-add-commit cycle for single and multiple files.  
+- Explain where information is stored at each stage of Git commit workflow.
 
 
 

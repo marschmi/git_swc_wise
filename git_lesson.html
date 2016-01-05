@@ -80,6 +80,8 @@ img {
 </ul></li>
 <li><a href="#why-version-control">Why version control?</a></li>
 <li><a href="#configuring-git">Configuring Git</a></li>
+<li><a href="#create-a-local-repository">Create a Local Repository</a></li>
+<li><a href="#tracking-changes">Tracking Changes</a></li>
 <li><a href="#key-words">Key Words</a></li>
 </ul>
 </div>
@@ -138,11 +140,38 @@ img {
 <div id="configuring-git" class="section level1">
 <h1>Configuring Git</h1>
 <blockquote>
-<p><strong>Open up your bash shell, what happens when you run:</strong><br /><code>git config --list</code></p>
+<p><strong>Open up your bash shell, what happens when you run:</strong><br />1. <code>git config --list</code><br />2. <code>git config</code></p>
 </blockquote>
 <blockquote>
 <p>Now, let’s set up Git by going to <a href="http://swcarpentry.github.io/git-novice/02-setup.html" target="_blank">http://swcarpentry.github.io/git-novice/02-setup.html</a></p>
 </blockquote>
+</div>
+<div id="create-a-local-repository" class="section level1">
+<h1>Create a Local Repository</h1>
+<p><strong>Learning Goals</strong></p>
+<ul>
+<li>What is a <strong>local</strong> repository?<br /></li>
+<li>Create a local Git repository.</li>
+</ul>
+<p>A <strong>local</strong> repository means that we are creating respository on our own computer. Our computer is local - It especially likes attending the weekly farmers market and supporting local businesses.</p>
+<blockquote>
+<ol style="list-style-type: decimal">
+<li>In bash, navigate to <strong><code>Desktop -&gt; SWC -&gt; SWC_R</code></strong> folder from yesterday afternoon’s R lesson.<br /></li>
+<li>In the <strong><code>SWC_R</code></strong> folder, type <code>ls -a</code>. the <code>-a</code> flag shows us the hidden items within the directory.<br /></li>
+<li>What files you see?</li>
+<li>Now, <strong>initialize the repository</strong> by typing <code>git init</code>.<br /></li>
+<li>What files you see that <strong><code>SWC_R</code></strong> is now a repository under version control?<br /></li>
+<li>To check that everything is set up correctly by asking Git to tell us the status of our project, type <code>git status</code>.</li>
+</ol>
+</blockquote>
+</div>
+<div id="tracking-changes" class="section level1">
+<h1>Tracking Changes</h1>
+<p><strong>Learning Goals</strong></p>
+<ul>
+<li>Go through the modify-add-commit cycle for single and multiple files.<br /></li>
+<li>Explain where information is stored at each stage of Git commit workflow.</li>
+</ul>
 </div>
 <div id="key-words" class="section level1">
 <h1>Key Words</h1>
