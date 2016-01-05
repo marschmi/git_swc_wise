@@ -44,7 +44,12 @@ A **commit** records the current state of a set of files (a group of changes) in
 
 ### Version Control Repository
 
-A **version control repository** is a storage area where a version control system stores the full history of commits of a project and information about who changed what, when.
+A **version control repository** is a storage area where a version control system stores the full history of commits of a project and information about who changed what, when.  
+
+### Merge  
+
+Multiple versions of a document can be **merged** into one.  
+
 
 # Why version control?
 
@@ -59,6 +64,22 @@ Teams are not the only ones to benefit from version control: lone researchers ca
 Version control is the lab notebook of the digital world: it’s what professionals use to keep track of what they’ve done and to collaborate with other people. Every large software development project relies on it, and most programmers use it for their small jobs as well. And it isn’t just for software: books, papers, small data sets, and anything that changes over time or needs to be shared can and should be stored in a version control system
 
 
+Examples from my own research: <a href="https://github.com/marschmi" target="_blank">https://github.com/marschmi</a>   
+ 
+
+> Go to the original Software Carpentry lesson on **automated version control**: <a href="http://swcarpentry.github.io/git-novice/01-basics.html" target="_blank">http://swcarpentry.github.io/git-novice/01-basics.html</a>  
+
+
+
+# Configuring Git  
+
+
+> **Open up your bash shell, what happens when you run:**  
+> 1. `git config --list`  
+> 2. `git config`
+
+
+> Now, let's set up Git by going to <a href="http://swcarpentry.github.io/git-novice/02-setup.html" target="_blank">http://swcarpentry.github.io/git-novice/02-setup.html</a>
 
 
 
@@ -72,7 +93,8 @@ A helpful resource describing version control with git basics from Software Carp
 
 - **Version Control**  
 - **Repository**  
-- **Commit**
+- **Commit**  
+- **Merge**
 
 
 
