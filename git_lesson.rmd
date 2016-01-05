@@ -25,9 +25,9 @@ The main lesson link can be found at <a href="http://swcarpentry.github.io//git-
   
   
 # The scenario  
-You are working on a project with your advisor/PI/post-doc/PhD or Masters student and have a deadline for a paper quickly approaching.  To get the paper where it needs to be for publication you and your collaborator must work on the document simultaneously. You're quickly passing documents back and forth and trying to keep up with each other to meet the deadline.  In the midst of all of the changes to the document, something is lost.  Which version of the document was it in?  
+You are working on a project with your advisor/PI/post-doc/staff member/PhD, Masters, or undergraduate student and have a deadline for a paper quickly approaching.  To get the paper where it needs to be for publication you and your collaborator must work on the document simultaneously. You're quickly passing documents back and forth and trying to keep up with each other to meet the deadline.  In the midst of all of the changes to the document, something is lost.  Which version of the document was it in?  
   
-This moment reminds you of a time when you attended a Software Carpentry Workshop in January.  It was a busy time doing the workshop and getting ready for the semester.  However, you remember that you learned **version control is better than mailing files back and forth.**
+In this moment you are reminded of a time when you attended a Software Carpentry Workshop in January 2016.  It was a busy time doing the workshop and getting ready for the semester.  However, there was one thing you remember that you learned **version control is better than mailing files back and forth.**
 
 But why?
   
@@ -232,15 +232,142 @@ git commit -m myfile.txt "my recent changes"
 > Create a new file called README.txt. Write a three-line description of the swc_r repository, commit your changes, then modify one line, add a line, and display the differences between its updated state and its original state.
 
 
+# Remote Repositories on GitHub  
+
+**Learning Goals**  
+
+- Explain what **remote** repositories are and why they are useful.  
+- Clone a remote repository.  
+- Push to or pull from a remote repository.  
+
+
+Version control really comes into its own when we begin to collaborate with other people. We already have most of the machinery we need to do this; the only thing missing is to copy changes from one repository to another.
+
+Systems like Git allow us to move work between any two repositories. In practice, though, it’s easiest to use one copy as a central hub, and to keep it on the web rather than on someone’s laptop. Most programmers use hosting services like GitHub, BitBucket or GitLab.
+
+Let’s start by sharing the changes we’ve made to our current project with the world.  
+
+> 1. Log in to GitHub.  
+> 2. Click on the icon in the top right corner to create a new repository called `SWC_R`:  
+
+![](Images/remote_repo.png)
+
+As soon as the repository is created, GitHub displays a page with a URL and some information on how to configure your local repository:
+
+![](Images/remote_created.png)
+
+This effectively does the following on GitHub’s servers:
+
+`mkdir SWC_R`  
+`cd SWC_R`  
+`git init`
+
+
+Our local repository still contains our earlier work on variables.R, but the remote repository on GitHub doesn’t contain any files yet:
+
+![](Images/local_vs_remote.png)
+
+
+The next step is to connect the two repositories. We do this by making the GitHub repository a remote for the local repository. The home page of the repository on GitHub includes the string we need to identify it:
+
+![](Images/mergeSSH.png)  
+
+> 4. Click on the ‘HTTPS’ link to change the protocol from SSH to HTTPS.
+
+
+
+> **HTTPS vs SSH**  
+> We use HTTPS here because it does not require additional configuration. After the workshop you may want to set up SSH access, which is a bit more secure, by following the great tutorial from <a href="https://help.github.com/articles/generating-ssh-keys/" target="_blank">GitHub</a>.
+
+
+![](Images/mergeHTML.png)  
+
+
+> 5. Copy that **HTTPS** URL from the browser, go into the local `SWC_R` repository.  
+> 6. Run this command: `git remote add origin https://github.com/marschmi/SWC_R.git`  
+
+Make sure to use the URL for your repository rather than marschmi’s.
+
+We can check that the command has worked by running `git remote -v:`
+
+> 7. `git remote -v`  
+
+The name `origin` is a local nickname for your remote repository: we could use something else if we wanted to, but `origin` is by far the most common choice.
+
+Once the nickname `origin` is set up, this command will push the changes from our local repository to the repository on GitHub:
+
+> 8. `git push origin master`
+
+***  
+
+**Proxy**  
+If the network you are connected to uses a proxy there is an chance that your last command failed with “Could not resolve hostname” as the error message. To solve this issue you need to tell Git about the proxy:
+
+`git config --global http.proxy http://user:password@proxy.url`  
+`git config --global https.proxy http://user:password@proxy.url`  
+
+When you connect to another network that doesn’t use a proxy you will need to tell Git to disable the proxy using:
+
+`git config --global --unset http.proxy`  
+`git config --global --unset https.proxy`  
+
+**Password Managers**  
+If your operating system has a password manager configured, git push will try to use it when it needs your username and password. If you want to type your username and password at the terminal instead of using a password manager, type:
+
+`unset SSH_ASKPASS`  
+
+You may want to add this command at the end of your ~/.bashrc to make it the default behavior.
+
+***
+
+Our local and remote repositories are now in this state:
+
+![](Images/current_repo.png) 
+
+
+We can pull changes from the remote repository to the local one as well:
+
+> 9. `git pull origin master`
+
+Pulling has no effect in this case because the two repositories are already synchronized. If someone else had pushed some changes to the repository on GitHub, though, this command would download them to our local repository.
+
+
+> **Challenge 1:  Remote vs Local Repositories**  
+> 1. Define **remote** repository.  
+> 2. Define **local** repository.  
+> 3. What is the difference between remote and local repositories*?  
+
+
+> **Challenge 2:  `git push` vs `git pull`**  
+> 1. What happened when you performed `git push`?  
+> 2. What happened when you ran `git pull`?  
+> 3. How are `git push` and `git pull` different?
+
+> **Challenge 3:  Github Timestamp**  
+> Create a repository on GitHub, clone it, add a file, push those changes to GitHub, and then look at the <a href="http://swcarpentry.github.io//git-novice/reference.html#timestamp" target="_blank">timestamp</a> of the change on GitHub. How does GitHub record times, and why?
+
+
+
+# Remember 2 things:  
+> 1. **Version control is better than mailing files back and forth!  (It is also better than dropbox.)**  
+> 2. **Do you want to be your (or advisor's/collaborator's) friend in 6 months?  A year? 2 years?**
 
 # Key Words
 A helpful resource describing version control with git basics from Software Carpentry <a href="http://swcarpentry.github.io//git-novice/reference.html#version-control" target="_blank">can be found here.</a>  
 
 - **Version Control**  
 - **Repository**  
+  - **Local** vs **Remote**
 - **Commit**  
-- **Merge**
-
+- **Merge**  
+- `git config`  
+- `git status`  
+- `git add`  
+- `git commit`  
+- `git log`  
+- `git diff`  
+- `git push`  
+- `git pull`  
 
 
 

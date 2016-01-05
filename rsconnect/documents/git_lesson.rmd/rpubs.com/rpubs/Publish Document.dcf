@@ -1,0 +1,7 @@
+name: Publish Document
+account: rpubs
+server: rpubs.com
+bundleId:
+        https://api.rpubs.com/api/v1/document/140119/c727b83b9d6d4f39934eb424d76b4f2d
+url: http://rpubs.com/marschmi/140119
+when: 1451982972.76563
