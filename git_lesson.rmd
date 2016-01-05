@@ -22,7 +22,8 @@ The main page for the core lessons from the Software Carpentry Foundation can be
 The lesson here is based on Software Carpentry's core curriculum on git entitled **"Version Control with Git"** and is maintained by Ivan Gonzalez and Daisie Huang.  
 
 The main lesson link can be found at <a href="http://swcarpentry.github.io//git-novice/" target="_blank">http://swcarpentry.github.io//git-novice/</a>   
-  
+
+
   
 # The scenario  
 You are working on a project with your advisor/PI/post-doc/staff member/PhD, Masters, or undergraduate student and have a deadline for a paper quickly approaching.  To get the paper where it needs to be for publication you and your collaborator must work on the document simultaneously. You're quickly passing documents back and forth and trying to keep up with each other to meet the deadline.  In the midst of all of the changes to the document, something is lost.  Which version of the document was it in?  
@@ -64,12 +65,17 @@ Teams are not the only ones to benefit from version control: lone researchers ca
 Version control is the lab notebook of the digital world: it’s what professionals use to keep track of what they’ve done and to collaborate with other people. Every large software development project relies on it, and most programmers use it for their small jobs as well. And it isn’t just for software: books, papers, small data sets, and anything that changes over time or needs to be shared can and should be stored in a version control system
 
 
-Examples from my own research: <a href="https://github.com/marschmi" target="_blank">https://github.com/marschmi</a>   
- 
+Examples from my own research: <a href="https://github.com/marschmi" target="_blank">https://github.com/marschmi</a>  
+
+- A <a href="https://twitter.com/micro_marian/status/674294091300134912" target="_blank">victory tweet</a> from my first dissertation chapter. 
+
 
 > Go to the original Software Carpentry lesson on **automated version control**: <a href="http://swcarpentry.github.io/git-novice/01-basics.html" target="_blank">http://swcarpentry.github.io/git-novice/01-basics.html</a>  
 
 
+# Remembering Bash and the Unix Shell
+
+**A note on bash and why it is important:**  It's like the air traffic control tower - allowing airlines from all over the globe to work together to get people around.  In this case, bash is directly talking to your computer through unix shell commands to run many programs.  If you need to run multiple programs at once an efficient way to do it automatically is to use your bash shell.  Here we will the bash shell simultaneously run nano, git, unix, and R!  
 
 # Configuring Git  
 
