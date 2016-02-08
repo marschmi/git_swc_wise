@@ -1,4 +1,6 @@
-##  My Git Lesson Plan for U Mich Women in Science and Engineering Workshop held on January 4-6, 2016
+##  Git Lesson Plan 
+### For: U Mich Women in Science and Engineering Software Carpentry Workshop  
+### When: January 4-6, 2016
 
 The lesson/presentation from this repository can be viewed at: [https://rpubs.com/marschmi/git_wise_2016](https://rpubs.com/marschmi/git_wise_2016)
 
