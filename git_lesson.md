@@ -1,20 +1,6 @@
----
-title: "Introductory Version Control with Git"
-subtitle: "U of M Software Carpentry Workshop"
-author: "Marian L. Schmidt, @micro_marian, marschmi@umich.edu"
-date: "October 18th, 2016"
-output:
-  html_document:
-    code_folding: show
-    highlight: haddock
-    keep_md: yes
-    theme: united
-    toc: yes
-    toc_float:
-      collapsed: no
-      smooth_scroll: yes
-      toc_depth: 3
----
+# Introductory Version Control with Git
+Marian L. Schmidt, @micro_marian, marschmi@umich.edu  
+October 18th, 2016  
 
 ***
 > **Warm up discussion:**  
