@@ -253,11 +253,6 @@ Which of the following commit messages would be most appropriate for the last co
 > - and display the differences between its updated state and its original state.
 
 
-# Exploring History in Git
-
-In this lesson we will navigate to <a href="http://swcarpentry.github.io/git-novice/05-history/" target="_blank">http://swcarpentry.github.io/git-novice/05-history/</a>  
-
-
 
 # Remote Repositories on GitHub  
 
@@ -372,6 +367,11 @@ Pulling has no effect in this case because the two repositories are already sync
 
 > **Challenge 3:  Github Timestamp**  
 > Create a repository on GitHub, clone it, add a file, push those changes to GitHub, and then look at the <a href="http://swcarpentry.github.io//git-novice/reference.html#timestamp" target="_blank">timestamp</a> of the change on GitHub. How does GitHub record times, and why?
+
+
+# Exploring History in Git
+
+In this lesson we will navigate to <a href="http://swcarpentry.github.io/git-novice/05-history/" target="_blank">http://swcarpentry.github.io/git-novice/05-history/</a>  
 
 
 

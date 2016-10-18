@@ -3,5 +3,5 @@ account: rpubs
 server: rpubs.com
 appId: https://api.rpubs.com/api/v1/document/219586/34cef374698248dd998a506be02f2d1a
 bundleId: https://api.rpubs.com/api/v1/document/219586/34cef374698248dd998a506be02f2d1a
-url: http://rpubs.com/publish/claim/219586/0a744c7969184bab94617eec9e76a0ee
-when: 1476760043.66686
+url: http://rpubs.com/marschmi/219586
+when: 1476792104.09013
