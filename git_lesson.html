@@ -512,6 +512,10 @@ Create a new file called README.txt. Write a three-line description of the swc_r
 </blockquote>
 </div>
 </div>
+<div id="exploring-history-in-git" class="section level1">
+<h1>Exploring History in Git</h1>
+<p>In this lesson we will navigate to <a href="http://swcarpentry.github.io/git-novice/05-history/" target="_blank">http://swcarpentry.github.io/git-novice/05-history/</a></p>
+</div>
 <div id="remote-repositories-on-github" class="section level1">
 <h1>Remote Repositories on GitHub</h1>
 <p><strong>Learning Goals</strong></p>
@@ -654,6 +658,8 @@ Create a repository on GitHub, clone it, add a file, push those changes to GitHu
 </li>
 <li><strong>Merge</strong><br />
 </li>
+<li><strong>origin</strong>: a local nickname for your remote repository</li>
+<li><strong>master</strong>: a nickname for your local repository</li>
 <li><code>git config</code><br />
 </li>
 <li><code>git status</code><br />
@@ -664,12 +670,15 @@ Create a repository on GitHub, clone it, add a file, push those changes to GitHu
 </li>
 <li><code>git log</code><br />
 </li>
-<li><code>git diff</code><br />
+<li><code>git diff</code>: Allows us to look at older versions of the file compared to the current (non-staged) version of the file
+<ul>
+<li><code>git diff HEAD~2 filename.R</code>: Takes us back 2 versions ago</li>
+</ul></li>
+<li><code>git push</code>: Push changes from the local repository up to the remote repository.<br />
 </li>
-<li><code>git push</code><br />
-</li>
-<li><code>git pull</code></li>
+<li><code>git pull</code>: Pull changes from the remote repository down to the local repository.</li>
 </ul>
+<p>When adding a local to a new remote repo: - <code>git remote add origin  ___(url)___</code> - <code>git remote -v</code>: to check if the URL is correct - <code>git push -u origin master</code></p>
 </div>
 
 

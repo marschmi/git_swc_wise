@@ -253,6 +253,12 @@ Which of the following commit messages would be most appropriate for the last co
 > - and display the differences between its updated state and its original state.
 
 
+# Exploring History in Git
+
+In this lesson we will navigate to <a href="http://swcarpentry.github.io/git-novice/05-history/" target="_blank">http://swcarpentry.github.io/git-novice/05-history/</a>  
+
+
+
 # Remote Repositories on GitHub  
 
 **Learning Goals**  
@@ -381,14 +387,22 @@ A helpful resource describing version control with git basics from Software Carp
   - **Local** vs **Remote**
 - **Commit**  
 - **Merge**  
+- **origin**: a local nickname for your remote repository
+- **master**: a nickname for your local repository
 - `git config`  
 - `git status`  
 - `git add`  
 - `git commit`  
 - `git log`  
-- `git diff`  
-- `git push`  
-- `git pull`  
+- `git diff`:  Allows us to look at older versions of the file compared to the current (non-staged) version of the file  
+    - `git diff HEAD~2 filename.R`: Takes us back 2 versions ago
+- `git push`:  Push changes from the local repository up to the remote repository.  
+- `git pull`: Pull changes from the remote repository down to the local repository.
+
+When adding a local to a new remote repo:
+- `git remote add origin  ___(url)___`
+- `git remote -v`: to check if the URL is correct
+- `git push -u origin master`
 
 
 
