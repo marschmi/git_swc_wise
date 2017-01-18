@@ -77,7 +77,7 @@ Examples from my own research: <a href="https://github.com/marschmi" target="_bl
 
 # Configuring Git  
 
-> **Open up your bash shell, what happens when you run:**  
+> **Open up the unix shell, what happens when you run:**  
 > 1. `git config --list`  
 > 2. `git config`
 
@@ -90,18 +90,21 @@ Examples from my own research: <a href="https://github.com/marschmi" target="_bl
 **Learning Goals**  
 
 - What is a **local** repository?  
-- Create a local Git repository.  
+- Create a local **Git** repository.  
 - Check the status of a repository.
 
 
 A **local** repository means that we are creating respository on our own computer.  Our computer is local - It especially likes attending the weekly farmers market and supporting local businesses.  
 
-> 1. In bash, navigate to **`Desktop -> SWC -> SWC_R`** folder from the morning's R lesson.  
-> 2. In the **`SWC_R`** folder, type `ls -a`.  Remeber, the `-a` flag shows us the hidden items within the directory.  
-> 3. What files do you see?
-> 4. Now, **initialize the repository** by typing `git init`.  
-> 5. What files do you see now that **`SWC_R`** is now a repository under version control?  
-> 6. To check that everything is set up correctly by asking Git to tell us the status of our project, type `git status`.
+> 1. In the shell, navigate to your **home directory** and create a new directory called `git_repos`.
+> 2. `cd` into the `git_repos` folder.  
+> 3. In the **`git_repos`** folder, make another new directory called `swc_workshop`.  
+> 4. `cd` into `swc_workshop`.  
+> 5. Type `ls -a`.  
+> 6. What files do you see?
+> 7. Now, **initialize the repository** by typing `git init`.  
+> 8. What files do you see now that **`swc_workshop`** is a repository under version control?  
+> 9. To check that everything is set up correctly by asking git to tell us the status of our project, type `git status`.  
 
 
 # Tracking Changes  
@@ -112,58 +115,51 @@ A **local** repository means that we are creating respository on our own compute
 - Explain where information is stored at each stage of Git commit workflow.
 
 
-> Let's look at `variables.R` by typing `cat variables.R` into the shell.  What happens?  What command does this remind your of?  
-> `git status`
+> 1. **Copy** the `gapminder_analysis.R` file **and* the `gapminder-FiveYearData.csv`from yesterday's R lesson.  
+> 2. Take a look at the `gapminder_analysis.R` file by typing `less gapminder_analysis.R` into the shell.  Take a look at `gapminder-FiveYearData.csv` by using `head -n 10 gapminder-FiveYearData.csv`
+> 3. Type `git status`.  What does git tell us now?  
+> 4. So far the changes are "untracked" with git.  Now we need to tell git to keep track of the changes we have made - in other words, it's time for the first commit!  
+> 5. `git add gapminder_analysis.R` and `git status`.  What happened?  
+> 6. `git add gapminder-FiveYearData.csv` and `git status`.
+> 7. What happened?  
 
+Git now knows that it’s supposed to keep track of `gapminder_analysis.R` and `git add gapminder-FiveYearData.csv`, but it hasn’t recorded these changes as a commit yet. To get it to do that, we need to run one more command:
 
-> 1. Open up the `variables.R` file with nano or notepad.  
-> 2. Make a commented header to the file.  For example, `# This is the document where I learn introductory R.`  
-> 3. Save the changes.  
-> 4. `git status`  
-> 5. So far the changes are "untracked" with git.  Now we need to tell git to keep track of the changes we have made - in other words, it's time for the first commit!  
-> 6. `git add variables.R`  
-> 7. `git status`  
-> 8. What happened?  
+> 8. `git commit -m "Adding gapminder_analysis.R and gapminder-FiveYearData.csv files to repository"`  
 
-Git now knows that it’s supposed to keep track of `variables.R`, but it hasn’t recorded these changes as a commit yet. To get it to do that, we need to run one more command:
+When we run `git commit`, Git takes everything we have told it to save by using `git add` and stores a copy permanently inside the special **.git** directory. This permanent copy is called a commit (or revision) and its short identifier is `f22b25e` (Your commit will have another unique identifier.)
 
-> 9. `git commit -m "Adding commented header"`  
-
-
-When we run `git commit`, Git takes everything we have told it to save by using `git add` and stores a copy permanently inside the special **.git** directory. This permanent copy is called a commit (or revision) and its short identifier is `f22b25e` (Your commit may have another unique identifier.)
-
-We use the `-m` flag (for “message”) to record a short, descriptive, and specific comment that will help us remember later on what we did and why. If we just run git commit without the `-m` option, Git will launch nano (or whatever other editor we configured as core.editor) so that we can write a longer message.
+We use the `-m` flag (for “message”) to record a short, descriptive, and specific comment that will help us remember later on what we did and why. If we just run `git commit` without the `-m` option, Git will launch nano (or whatever other editor we configured as core.editor) so that we can write a longer message.
 
 Good commit messages start with a brief (<50 characters) summary of changes made in the commit. If you want to go into more detail, add a blank line between the summary line and your additional notes.
 
+![](Images/xkcd_gitcommit.png)
+
 If we run git status now:
 
-> 10. `git status`  
+> 9. `git status`: Now, git tells us everything is up to date. If we want to know what we’ve done recently, we can ask git to show us the project’s history using `git log`:  
 
-it tells us everything is up to date. If we want to know what we’ve done recently, we can ask Git to show us the project’s history using `git log`:  
-
-> 11. `git log`  
-
-`git log` lists all commits made to a repository in reverse chronological order. The listing for each commit includes the commit’s full identifier (which starts with the same characters as the short identifier printed by the git commit command earlier), the commit’s author, when it was created, and the log message Git was given when the commit was created.
+> 10. `git log`:  `git log` lists all commits made to a repository in reverse chronological order. The listing for each commit includes the commit’s full identifier (which starts with the same characters as the short identifier printed by the git commit command earlier), the commit’s author, when it was created, and the log message Git was given when the commit was created.
 
 
-**Where Are My Changes?**  If we run `ls` at this point, we will still see just one file called `variables.R`. That’s because Git saves information about files’ history in the special `.git` directory mentioned earlier so that our filesystem doesn’t become cluttered (and so that we can’t accidentally edit or delete an old version).
+**Where Are My Changes?**  If we run `ls` at this point, we will still see just one file called `gapminder_analysis.R`. That’s because git saves information about files’ history in the special `.git` directory mentioned earlier so that our filesystem doesn’t become cluttered (and so that we can’t accidentally edit or delete an old version).
 
 Now let's adds more information to the file. (Again, we’ll edit with nano and then cat the file to show its contents; you may use a different editor, and don’t need to cat.)  
 
-> 12. Using nano/notepad, comment some more of the code in `variables.R` and save the file.  
-> 13. `cat variables.R` to see the changes.  
+> 11. Make a commented header to the file with some identifying information.  For example, `# Date: January 18th, 2017.`  Or comment some of the code.  
+> 12. Save the changes to `gapminder_analysis.R`
+> 13. `cat gapminder_analysis.R` to see the changes.  
 > 14. Now run `git status`.  
 
-The last line is the key phrase: `“no changes added to commit”.` We have changed this file, but we haven’t told Git we will want to save those changes (which we do with git add) nor have we saved them (which we do with git commit). So let’s do that now. It is good practice to always review our changes before saving them. We do this using `git diff`. This shows us the differences between the current state of the file and the most recently saved version:
+The last line is the key phrase: `“no changes added to commit”.` We have changed this file, but we haven’t told git we will want to save those changes (which we do with git add) nor have we saved them (which we do with git commit). So let’s do that now. It is good practice to always review our changes before saving them. We do this using `git diff`. This shows us the differences between the current state of the file and the most recently saved version:
 
 > 15. `git diff`  
 
 The output is cryptic because it is actually a series of commands for tools like editors and patch telling them how to reconstruct one file given the other. If we break it down into pieces:
 
-1. The first line tells us that Git is producing output similar to the Unix diff command comparing the old and new versions of the file.  
+1. The first line tells us that git is producing output similar to the Unix diff command comparing the old and new versions of the file.  
 
-2. The second line tells exactly which versions of the file Git is comparing; df0654a and 315bf3a are unique computer-generated labels for those versions.  
+2. The second line tells exactly which versions of the file git is comparing; df0654a and 315bf3a are unique computer-generated labels for those versions.  
 
 3. The third and fourth lines once again show the name of the file being changed.  
 
@@ -176,11 +172,11 @@ After reviewing our change, it’s time to commit it:
 
 Whoops: Git won’t commit because we didn’t use `git add first`. Let’s fix that:
 
-> 18. `git add variables.R`  
+> 18. `git add gapminder_analysis.R`  
 > 19. `git commit -m "Added comment on ______"`  
 > 20. `git status`  
 
-Git insists that we add files to the set we want to commit before actually committing anything because we may not want to commit everything at once. For example, suppose we’re adding a few citations to our supervisor’s work to our thesis. We might want to commit those additions, and the corresponding addition to the bibliography, but not commit the work we’re doing on the conclusion (which we haven’t finished yet).
+Git insists that we add files to the set we want to commit before actually committing anything because **we may not want to commit everything at once**. For example, suppose we’re adding a few citations to our supervisor’s work to our thesis. We might want to commit those additions, and the corresponding addition to the bibliography, but not commit the work we’re doing on the conclusion (which we haven’t finished yet).
 
 To allow for this, Git has a special **staging area** where it keeps track of things that have been added to the current change set but not yet committed.
 
@@ -190,28 +186,29 @@ If you think of Git as taking snapshots of changes over the life of a project:
 - `git add` specifies what will go in a snapshot (putting things in the staging area), and  
 - `git commit` then actually takes the snapshot, and makes a permanent record of it (as a commit).  
 
-If you don’t have anything staged when you type `git commit`, Git will prompt you to use `git commit -a` or `git commit --all`, which is kind of like gathering everyone for the picture! However, it’s almost always better to explicitly add things to the staging area, because you might commit changes you forgot you made. (Going back to snapshots, you might get the extra with incomplete makeup walking on the stage for the snapshot because you used `-a`!) Try to stage things manually, or you might find yourself searching for `git undo commit` more than you would like!
+If you don’t have anything staged when you type `git commit`, git will prompt you to use `git commit -a` or `git commit --all`, which is kind of like gathering everyone for the picture! However, it’s almost always better to explicitly add things to the staging area, because you might commit changes you forgot you made. (Going back to snapshots, you might get the extra with incomplete makeup walking on the stage for the snapshot because you used `-a`!) Try to stage things manually, or you might find yourself searching for `git undo commit` more than you would like!
 
 ![](Images/staging_area.png)
 
 
 Let’s watch as our changes to a file move from our editor to the staging area and into long-term storage.
 
-> 21.  Add `dist10 <- rnorm(10)` for a random normal distribution of 10 numbers at the bottom of the `variables.R` file.  
+> 21.  Add `ggplot(data = gapminder, aes(x = year, y = lifeExp, color = continent))` `+`
+  `geom_point()` for a plot with year on the x-axis and life expectantcy on the y axis in the `gapminder_analysis.R` file.  
 > 22. `git diff`
 
 So far, so good: we’ve added one line to the end of the file (shown with a + in the first column). Now let’s put that change in the staging area and see what `git diff` reports:
 
-> 23. `git add variables.R`  
+> 23. `git add gapminder_analysis.R`  
 > 24. `git diff`  
 
-There is no output: as far as Git can tell, there’s no difference between what it’s been asked to save permanently and what’s currently in the directory. However, if we do this:
+There is no output: as far as git can tell, there’s no difference between what it’s been asked to save permanently and what’s currently in the directory. However, if we do this:
 
 > 25. `git diff --staged`
 
 it shows us the difference between the last committed change and what’s in the staging area. Let’s save our changes:
 
-> 26. `git commit -m "Created dist10, a random normal distribution of 10 numbers."`  
+> 26. `git commit -m "Added code to plot x = year and y = life expectantcy."`  
 
 Check the status: 
 
@@ -237,7 +234,7 @@ Which of the following commit messages would be most appropriate for the last co
 
 
 > **Challege Question 2:  Committing Changes to Git**  
-> Which command(s) below would save the changes of myfile.txt to my local Git repository?
+> Which command(s) below would save the changes of myfile.txt to my local git repository?
 
 ```
 1.  $ git commit -m "my recent changes"
@@ -251,7 +248,7 @@ Which of the following commit messages would be most appropriate for the last co
 ```
 
 > **Challenge 3:  Create a project description**  
-> Create a new file called README.txt. Write a three-line description of the swc_r repository, commit your changes, then:
+> Create a new file called README.txt. Write a three-line description of the `swc_workshop` repository, commit your changes, then:
 
 > - modify one line
 > - add a line
