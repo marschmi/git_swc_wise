@@ -296,12 +296,12 @@ As soon as the repository is created, GitHub displays a page with a URL and some
 
 This effectively does the following on GitHub’s servers:
 
-`mkdir SWC_R`  
-`cd SWC_R`  
+`mkdir swc_workshop`  
+`cd swc_workshop`  
 `git init`
 
 
-Our local repository still contains our earlier work on variables.R, but the remote repository on GitHub doesn’t contain any files yet:
+Our local repository still contains our earlier work on `gapminder_analysis.R`, but the remote repository on GitHub doesn’t contain any files yet:
 
 ![](Images/local_vs_remote.png)
 
@@ -322,7 +322,7 @@ The next step is to connect the two repositories. We do this by making the GitHu
 
 
 > 5. Copy that **HTTPS** URL from the browser, go into the local `SWC_R` repository.  
-> 6. Run this command: `git remote add origin https://github.com/marschmi/SWC_R.git`  
+> 6. Run this command: `git remote add origin https://github.com/marschmi/swc_workshop.git`  
 
 Make sure to use the URL for your repository rather than marschmi’s.
 

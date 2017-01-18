@@ -137,9 +137,9 @@ Good commit messages start with a brief (<50 characters) summary of changes made
 
 If we run git status now:
 
-> 9. `git status`: Now, git tells us everything is up to date. If we want to know what we’ve done recently, we can ask git to show us the project’s history using `git log`:  
+> 9. `git status`: Now, git tells us everything is up to date. If we want to know what we’ve done recently, we can ask git to show us the project’s history using `git log`  
 
-> 10. `git log`:  `git log` lists all commits made to a repository in reverse chronological order. The listing for each commit includes the commit’s full identifier (which starts with the same characters as the short identifier printed by the git commit command earlier), the commit’s author, when it was created, and the log message Git was given when the commit was created.
+> 10. `git log`  lists all commits made to a repository in reverse chronological order. The listing for each commit includes the commit’s full identifier (which starts with the same characters as the short identifier printed by the git commit command earlier), the commit’s author, when it was created, and the log message Git was given when the commit was created.
 
 
 **Where Are My Changes?**  If we run `ls` at this point, we will still see just one file called `gapminder_analysis.R`. That’s because git saves information about files’ history in the special `.git` directory mentioned earlier so that our filesystem doesn’t become cluttered (and so that we can’t accidentally edit or delete an old version).
@@ -208,7 +208,7 @@ There is no output: as far as git can tell, there’s no difference between what
 
 it shows us the difference between the last committed change and what’s in the staging area. Let’s save our changes:
 
-> 26. `git commit -m "Added code to plot x = year and y = life expectantcy."`  
+> 26. `git commit -m "Added code to plot gapminder data with x = year and y = life expectantcy."`  
 
 Check the status: 
 
@@ -272,7 +272,7 @@ Systems like Git allow us to move work between any two repositories. In practice
 Let’s start by sharing the changes we’ve made to our current project with the world.  
 
 > 1. Log in to GitHub.  
-> 2. Click on "Repositories", and then click on the ![](Images/new.png) icon in the top right corner to create a new repository called `SWC_R`:  
+> 2. Click on "Repositories", and then click on the ![](Images/new.png) icon in the top right corner to create a new repository called `swc_workshop` (**Note**: This name should be the same exact name as the folder on your computer):  
 
 ![](Images/remote_repo.png)
 
@@ -282,12 +282,12 @@ As soon as the repository is created, GitHub displays a page with a URL and some
 
 This effectively does the following on GitHub’s servers:
 
-`mkdir SWC_R`  
-`cd SWC_R`  
+`mkdir swc_workshop`  
+`cd swc_workshop`  
 `git init`
 
 
-Our local repository still contains our earlier work on variables.R, but the remote repository on GitHub doesn’t contain any files yet:
+Our local repository still contains our earlier work on `gapminder_analysis.R`, but the remote repository on GitHub doesn’t contain any files yet:
 
 ![](Images/local_vs_remote.png)
 
@@ -308,7 +308,7 @@ The next step is to connect the two repositories. We do this by making the GitHu
 
 
 > 5. Copy that **HTTPS** URL from the browser, go into the local `SWC_R` repository.  
-> 6. Run this command: `git remote add origin https://github.com/marschmi/SWC_R.git`  
+> 6. Run this command: `git remote add origin https://github.com/marschmi/swc_workshop.git`  
 
 Make sure to use the URL for your repository rather than marschmi’s.
 
