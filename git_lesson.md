@@ -1,10 +1,10 @@
 # Introductory Version Control with Git
 Marian L. Schmidt, @micro_marian, marschmi@umich.edu  
-October 18th, 2016  
+January 18th, 2017  
 
 ***
 > **Warm up discussion:**  
-> 1. How do you currently keep track of versions of the same document?  
+> 1. How do you currently keep track of versions of the same document for **(1) data analysis** and **(2) writing a paper/grant proposal**?  
 > 2. When working with a collaborator simultaneously, how do you keep track of versions of the same document?
 
 ***
@@ -19,11 +19,13 @@ The main lesson link can be found at <a href="http://swcarpentry.github.io//git-
 
   
 # The scenario  
-You are working on a project with your collaborator and have a deadline for a paper quickly approaching.  To get the paper where it needs to be for publication you and your collaborator must work on the document simultaneously. You're quickly passing documents back and forth and trying to keep up with each other to meet the deadline.  In the midst of all of the changes to the document, something is lost.  Which version of the document was it in?  
-  
-In this moment you are reminded of a time when you attended a Software Carpentry Workshop in January 2016.  It was a busy time during the workshop and getting ready for the semester.  However, there was one thing you remember that you learned **version control is better than mailing files back and forth.**
+Months ago, you submitted a scientific paper to a journal for publication and you’ve finally received your reviews back. The deadline for the reviews is quickly approaching and you are working with your collaborators to make the deadline.
 
-But why?
+As the first author, you are re-running analyses in R and working with your collaborators on re-writing the paper as per the reviewers comments. For the written document, you’re quickly passing a word documentment back and forth and trying to keep up with each other to meet the deadline. In the midst of all of the changes to the document, a paragraph of the results is lost. Which version of the word document was it in? Which version of your code file were those analyses in?
+
+In this moment you are reminded of a time when you attended a Software Carpentry Workshop in January 2017.  It was a busy time during the workshop and adjusting to the start of another semester.  However, there was one thing you learned **always commit your changes to your GitHub repo with a meaningful commit.**  Since you've followed this principle during this process, you know you can rely on your commits and version control for finding those results!
+
+But how?
   
 ## Some Key Words
   
@@ -47,11 +49,14 @@ Multiple versions of a document can be *merged* into one.
 
 # Why version control?
 
-1. **Nothing that is committed to version control is ever lost.** Since all old versions of files are saved, it’s always possible to go back in time to see exactly who wrote what on a particular day, or what version of a program was used to generate a particular set of results.  
+1. **Nothing that is committed to version control is ever lost.** Since all old versions of files are saved, it’s always possible to go back in time to see exactly who wrote what on a particular day, or what version of a program was used to generate a particular set of results. 
+
+#### This prevented me from losing my analysis two separate times when my computer crashed!
+
 2. As we have this record of who made what changes when, **we know who to ask if we have questions later on**, and, if needed it, **revert to a previous version,** much like the “undo” feature in an editor.  
 3. When several people collaborate in the same project, it’s possible to accidentally overlook or overwrite someone’s changes: **the version control system automatically notifies users whenever there’s a conflict between one person’s work and another’s.**
 
-Teams are not the only ones to benefit from version control: lone researchers can benefit immensely. Keeping a record of what was changed, when, and why is extremely useful for all researchers if they ever need to come back to the project later on (e.g., a year later, when memory has faded).  
+Teams are not the only ones to benefit from version control: **lone researchers can benefit immensely**. Keeping a record of what was changed, when, and why is extremely useful for all researchers if they ever need to come back to the project later on (e.g., a year later, when memory has faded).  
 
 **Do you want to be your own friend in a year?**
 
